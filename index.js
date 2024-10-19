@@ -12,8 +12,10 @@ app.set("views", path.join(__dirname, "views"));
 // Middleware to handle static files (like CSS, JS, etc.)
 app.use(express.static(path.join(__dirname, "public")));
 
-const homeRoute = require("./Routes/Home");
-app.use("/", homeRoute);
+const loginRoute = require("./Routes/Login");
+const taskRoute = require("./Routes/Tasks");
+app.use("/", loginRoute);
+app.use("/task", taskRoute);
 // app.get("/", async (req, res) => {
 //   res.render("index");
 // });

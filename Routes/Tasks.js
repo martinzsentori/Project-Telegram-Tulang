@@ -1,12 +1,9 @@
-// const express = require("express");
-// const router = express.Router();
-// const bodyParser = require("body-parser");
-// // const pagesTasks = require("../Pages/Tasks.ejs");
+const express = require("express");
+const router = express.Router();
 
-// router.get("/", async (req, res) => {
-//   try {
-//     res.send(pagesTasks.render);
-//   } catch (error) {
-//     res.send(error);
-//   }
-// });
+// Define the route that renders an EJS file
+router.get("/", (req, res) => {
+  res.render("Tasks"); // This will render views/index.ejs
+});
+
+module.exports = router;
