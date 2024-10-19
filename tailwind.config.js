@@ -5,12 +5,12 @@ module.exports = {
     extend: {},
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: [
-      // Specify the themes you want to use
-      "light", // Default light theme
-      // You can add more themes here if needed, like "cupcake", "dracula", etc.
-    ],
-    darkTheme: false, // Disable dark mode
-  },
+  // daisyui: {
+  //   themes: [
+  //     // Specify the themes you want to use
+  //     "light", // Default light theme
+  //     // You can add more themes here if needed, like "cupcake", "dracula", etc.
+  //   ],
+  //   darkTheme: false, // Disable dark mode
+  // },
 };
