@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./views/**/*.ejs", "./components/**/*.{html,js,ejs}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+    },
   },
-  plugins: [require("daisyui")],
-  // daisyui: {
-  //   themes: [
-  //     // Specify the themes you want to use
-  //     "light", // Default light theme
-  //     // You can add more themes here if needed, like "cupcake", "dracula", etc.
-  //   ],
-  //   darkTheme: false, // Disable dark mode
-  // },
+  plugins: [],
 };
