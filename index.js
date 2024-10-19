@@ -14,8 +14,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const loginRoute = require("./Routes/Login");
 const taskRoute = require("./Routes/Tasks");
+const inviteRoute = require("./Routes/Invites");
+
 app.use("/", loginRoute);
 app.use("/task", taskRoute);
+app.use("/invites", inviteRoute);
 // app.get("/", async (req, res) => {
 //   res.render("index");
 // });

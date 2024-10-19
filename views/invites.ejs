@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invite Friends</title>
+  <link rel="stylesheet" href="../src/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gradient-to-br from-black via-yellow-500 to-black min-h-screen  items-center justify-between">
+    <%- include('components/topcard') %>
+    <div class="container mx-auto mt-20 p-4 flex-grow">
+        <div class="bg-black text-white rounded-lg mb-16 shadow-lg p-6">
+        <h1 class="text-3xl font-bold text-center text-yellow-500 mb-8">Invite Friends</h1>
+        <ul class="space-y-4">
+            <% const friends = ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Fay', 'George', 'Hannah', 'Ivy', 'Jack']; %>
+            <% friends.forEach(friend => { %>
+            <li class="flex items-center justify-between bg-yellow-500 p-4 rounded-lg shadow-md">
+                <span class="text-lg font-medium"><%= friend %></span>
+                <button class=" hover:text-black ml-5 transition-colors duration-300 hover:bg-yellow-500 p-3 rounded-2xl">Invite</button>
+            </li>
+            <% }) %>
+        </ul>
+        </div>
+    </div>
+
+  <div class="">
+    <%- include('components/navbar') %>
+  </div>
+
+</body>
+</html>
